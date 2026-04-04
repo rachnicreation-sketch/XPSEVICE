@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Partenaires - RX Services</title>
+    <link rel="stylesheet" href="rxservices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-banner {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-rx-bg.png');
+            min-height: 50vh;
+        }
+        .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; padding: 100px 5%; }
+        .partner-card { background: var(--white); border-radius: 24px; padding: 3rem; text-align: center; box-shadow: var(--shadow); transition: var(--transition); display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; border: 1px solid rgba(0,0,0,0.03); }
+        .partner-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1); border-color: var(--primary); }
+        .partner-card h3 { font-size: 2rem; color: var(--text); margin-bottom: 1rem; margin-top: 1.5rem; letter-spacing: 1px; }
+        .partner-card i { font-size: 4rem; color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <header class="header-corporate">
+        <div class="header-top-bar">
+            <div class="logo">
+                <a href="index.html"><h1>RX SERVICES</h1></a>
+            </div>
+            <div class="actions">
+                <a href="#" class="btn-primary">Espace Client</a>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-globe"></i> FR / EN</a>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container-nav">
+                <ul>
+                    <li><a href="actualites.html">Actualités & Médias</a></li>
+                    <li><a href="solutions.html">Nos Services</a></li>
+                    <li><a href="innovation.html">Innovation & Digital</a></li>
+                    <li><a href="partenaires.html" class="active">Partenaires</a></li>
+                    <li><a href="carrieres.html">Carrières</a></li>
+                    <li><a href="investisseurs.html">Investisseurs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="content">
+            <h2>Écosystème RX Services</h2>
+            <p>Découvrez les partenaires stratégiques qui collaborent avec nous pour bâtir l'innovation technologique de demain.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="partners-grid">
+            <div class="partner-card">
+                <i class="fas fa-handshake"></i>
+                <h3 style="margin-bottom: 0;">NZAD'YIETO</h3>
+            </div>
+            <div class="partner-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3 style="margin-bottom: 0;">KOMPUT</h3>
+            </div>
+            <div class="partner-card">
+                <i class="fas fa-network-wired"></i>
+                <h3 style="margin-bottom: 0;">NESOP</h3>
+            </div>
+            <div class="partner-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3 style="margin-bottom: 0;">YEKOL'HUB</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>À Propos</h4>
+                <ul>
+                    <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="carrieres.html">Nos Valeurs</a></li>
+                    <li><a href="investisseurs.html">Gouvernance</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Nos Sites</h4>
+                <ul>
+                    <li><a href="projets.html">RX Projets</a></li>
+                    <li><a href="carrieres.html">RX Carrières</a></li>
+                    <li><a href="fondation.html">Fondation RX</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Nous Contacter</h4>
+                <ul>
+                    <li><a href="presse.html">Presse</a></li>
+                    <li><a href="fournisseurs.html">Fournisseurs</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="contact.html">Suggérer un service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RX Services. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

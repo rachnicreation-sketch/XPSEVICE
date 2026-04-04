@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services - XP Service</title>
+    <link rel="stylesheet" href="rxservices.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-banner {
+            background-image: linear-gradient(rgba(32, 178, 170, 0.4), rgba(0,0,0,0.6)), url('hero-rx-bg.png');
+            min-height: 60vh;
+        }
+        .solutions-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        .solutions-detail:nth-child(even) {
+            direction: rtl;
+        }
+        .solutions-detail:nth-child(even) .text-content {
+            direction: ltr;
+        }
+        .solutions-image {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .solutions-image img {
+            width: 100%;
+            display: block;
+        }
+        .section-additional-services {
+            padding: 80px 5%;
+            background: var(--bg-light);
+            border-radius: 40px;
+            margin-bottom: 6rem;
+        }
+        .services-sub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .sub-service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .sub-service-card:hover {
+            transform: translateY(-5px);
+        }
+        .sub-service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-corporate">
+        <div class="header-top-bar">
+            <div class="logo">
+                <a href="index.html"><h1>XP SERVICE</h1></a>
+            </div>
+            <div class="actions">
+                <a href="#" class="btn-primary">Espace Client</a>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-globe"></i> FR / EN</a>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container-nav">
+                <ul>
+                    <li><a href="actualites.html">Actualités & Médias</a></li>
+                    <li><a href="solutions.html" class="active">Nos Services</a></li>
+                    <li><a href="innovation.html">Innovation & Digital</a></li>
+                    <li><a href="carrieres.html">Carrières</a></li>
+                    <li><a href="investisseurs.html">Investisseurs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="content">
+            <h2>Nos Solutions d'Entreprise</h2>
+            <p>Accompagner votre croissance avec des expertises métiers de pointe et des services opérationnels essentiels.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="container">
+            <!-- Core Services -->
+            <div class="solutions-detail">
+                <div class="text-content">
+                    <i class="fas fa-cogs icon-large" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
+                    <h3>Conseil Stratégique</h3>
+                    <p>Définir votre vision et exécuter votre stratégie avec succès grâce à notre expertise sectorielle et pragmatisme opérationnel.</p>
+                    <ul style="margin-top: 1.5rem; list-style: disc; padding-left: 1.5rem;">
+                         <li>Stratégie de croissance</li>
+                         <li>Optimisation des coûts</li>
+                         <li>Fusion et acquisition</li>
+                    </ul>
+                </div>
+                <div class="solutions-image">
+                    <img src="news-image-1.png" alt="Conseil Stratégique">
+                </div>
+            </div>
+
+            <div class="solutions-detail">
+                <div class="text-content">
+                    <i class="fas fa-desktop icon-large" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
+                    <h3>Solutions Digitales</h3>
+                    <p>Transformation numérique et création d'outils sur-mesure connectant votre entreprise à ses clients.</p>
+                    <ul style="margin-top: 1.5rem; list-style: disc; padding-left: 1.5rem;">
+                         <li>Développement Cloud Native</li>
+                         <li>Applications Mobiles</li>
+                         <li>Architecture Microservices</li>
+                    </ul>
+                </div>
+                <div class="solutions-image">
+                    <img src="news-image-2.png" alt="Solutions Digitales">
+                </div>
+            </div>
+
+            <div class="solutions-detail">
+                <div class="text-content">
+                    <i class="fas fa-users icon-large" style="color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
+                    <h3>Ressources Humaines</h3>
+                    <p>Optimisation de vos processus RH pour attirer, retenir et faire grandir vos talents dans un environnement agile.</p>
+                    <ul style="margin-top: 1.5rem; list-style: disc; padding-left: 1.5rem;">
+                         <li>Gestion des Talents</li>
+                         <li>Formation Digitale</li>
+                         <li>Culture d'Entreprise</li>
+                    </ul>
+                </div>
+                <div class="solutions-image">
+                    <img src="news-image-1.png" alt="Ressources Humaines">
+                </div>
+            </div>
+
+            <!-- New Operational Services -->
+            <div class="section-additional-services">
+                <h3>Services Opérationnels & Logistique</h3>
+                <div class="services-sub-grid">
+                    <div class="sub-service-card">
+                        <i class="fas fa-truck-pickup"></i>
+                        <h4>Fourniture BTP</h4>
+                        <p>Logistique complète et fourniture de matériels de construction (engins, outils, matériaux) pour vos chantiers de toute envergure.</p>
+                    </div>
+                    <div class="sub-service-card">
+                        <i class="fas fa-users-cog"></i>
+                        <h4>Mise à disposition du personnel</h4>
+                        <p>Délégation de personnel qualifié et gestion administrative simplifiée pour vos besoins en main-d'œuvre temporaire ou de longue durée.</p>
+                    </div>
+                    <div class="sub-service-card">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Mise en relation entreprise</h4>
+                        <p>Accompagnement dans le networking et facilitation de partenariats stratégiques entre acteurs économiques complémentaires.</p>
+                    </div>
+                    <div class="sub-service-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h4>Agent de sécurité</h4>
+                        <p>Solutions de gardiennage et protection physique de vos sites industriels, bureaux et événements par des agents certifiés.</p>
+                    </div>
+                    <div class="sub-service-card">
+                        <i class="fas fa-video"></i>
+                        <h4>Installation CCTV</h4>
+                        <p>Étude, installation et maintenance de systèmes de vidéo-surveillance intelligents pour une sécurité périmétrique optimale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>À Propos</h4>
+                <ul>
+                    <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="carrieres.html">Nos Valeurs</a></li>
+                    <li><a href="investisseurs.html">Gouvernance</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Nos Sites</h4>
+                <ul>
+                    <li><a href="projets.html">XP Projets</a></li>
+                    <li><a href="carrieres.html">XP Carrières</a></li>
+                    <li><a href="fondation.html">Fondation XP</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Nous Contacter</h4>
+                <ul>
+                    <li><a href="presse.html">Presse</a></li>
+                    <li><a href="fournisseurs.html">Fournisseurs</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="contact.html">Suggérer un service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 XP Service. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - XP Service</title>
+    <link rel="stylesheet" href="xpservice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-banner {
+            background-image: linear-gradient(rgba(32, 178, 170, 0.4), rgba(0,0,0,0.6)), url('hero-rx-bg.png');
+            height: 40vh;
+        }
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 100px 5%; align-items: start; }
+        .contact-form { background: var(--white); padding: 3rem; border-radius: 24px; box-shadow: var(--shadow); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: 'Inter', sans-serif; }
+        .contact-info-list { padding: 2rem 0; }
+        .contact-info-list li { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
+        .contact-info-list i { font-size: 1.5rem; color: var(--primary); width: 30px; text-align: center; }
+        @media (max-width: 992px) { .contact-container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header class="header-corporate">
+        <div class="header-top-bar">
+            <div class="logo">
+                <a href="xpservice.html"><h1>XP SERVICE</h1></a>
+            </div>
+            <div class="actions">
+                <a href="#" class="btn-primary">Espace Client</a>
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-globe"></i> FR / EN</a>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container-nav">
+                <ul>
+                    <li><a href="actualites.html">Actualités & Médias</a></li>
+                    <li><a href="solutions.html">Nos Services</a></li>
+                    <li><a href="innovation.html">Innovation & Digital</a></li>
+                    <li><a href="carrieres.html">Carrières</a></li>
+                    <li><a href="investisseurs.html">Investisseurs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <div class="content">
+            <h2>Contactez-nous</h2>
+            <p>Nos experts sont à votre écoute pour définir ensemble vos projets de demain.</p>
+        </div>
+    </section>
+
+    <main class="contact-container">
+        <div class="info-side">
+            <h3>Nos Atteindre</h3>
+            <p>Vous avez une question, un projet ou souhaitez simplement échanger ? Nous sommes prêts à vous accompagner.</p>
+            
+            <ul class="contact-info-list">
+                <li><i class="fas fa-map-marker-alt"></i> <span>15 Rue de l'Innovation, 75008 Paris, France</span></li>
+                <li><i class="fas fa-phone-alt"></i> <span>+33 (0)1 45 67 89 00</span></li>
+                <li><i class="fas fa-envelope"></i> <span>contact@xpservice.com</span></li>
+            </ul>
+
+            <div style="background: #eef2f5; height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: var(--text-light);">
+                <span style="font-weight: 500;"><i class="fas fa-map"></i> Carte Interactive Bientôt Disponible</span>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#">
+                <input type="text" placeholder="Votre Nom Complet" required>
+                <input type="email" placeholder="Votre Adresse E-mail" required>
+                <input type="text" placeholder="Sujet de votre message">
+                <textarea rows="6" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 1.2rem; cursor: pointer; border: none;">Envoyer mon message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>À Propos</h4>
+                <ul>
+                    <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+                    <li><a href="carrieres.html">Nos Valeurs</a></li>
+                    <li><a href="investisseurs.html">Gouvernance</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Nos Sites</h4>
+                <ul>
+                    <li><a href="projets.html">XP Projets</a></li>
+                    <li><a href="carrieres.html">XP Carrières</a></li>
+                    <li><a href="fondation.html">Fondation XP</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Nous Contacter</h4>
+                <ul>
+                    <li><a href="presse.html">Presse</a></li>
+                    <li><a href="fournisseurs.html">Fournisseurs</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="contact.html">Suggérer un service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 XP Service. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
