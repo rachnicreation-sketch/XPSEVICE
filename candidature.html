@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - RX SERVICES</title>
+    <title>Candidature - RX SERVICES</title>
     <link rel="stylesheet" href="rxservices.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -13,14 +13,11 @@
         }
         .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 100px 5%; align-items: start; }
         .contact-form { background: var(--white); padding: 3rem; border-radius: 24px; box-shadow: var(--shadow); }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: 'Inter', sans-serif; }
-        .contact-info-list { padding: 2rem 0; }
-        .contact-info-list li { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
-        .contact-info-list i { font-size: 1.5rem; color: var(--primary); width: 30px; text-align: center; }
+        .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: 'Inter', sans-serif; }
+        .file-upload { background: #f8f9fa; padding: 2rem; border: 2px dashed var(--primary); border-radius: 12px; text-align: center; cursor: pointer; margin-bottom: 2rem; }
         #form-messages { margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none; }
         #form-messages.success { background: #d4edda; color: #155724; display: block; }
         #form-messages.error { background: #f8d7da; color: #721c24; display: block; }
-        @media (max-width: 992px) { .contact-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -43,7 +40,7 @@
                     <li><a href="actualites.html">Actualités & Médias</a></li>
                     <li><a href="solutions.html">Nos Services</a></li>
                     <li><a href="innovation.html">Innovation & Digital</a></li>
-                    <li><a href="carrieres.html">Carrières</a></li>
+                    <li><a href="carrieres.html" class="active">Carrières</a></li>
                     <li><a href="investisseurs.html">Investisseurs</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -53,34 +50,45 @@
 
     <section class="hero-banner">
         <div class="content">
-            <h2>Contactez-nous</h2>
-            <p>Nos experts sont à votre écoute pour définir ensemble vos projets de demain.</p>
+            <h2>Espace Candidature</h2>
+            <p>Rejoignez une équipe dynamique et façonnez l'avenir des services numériques.</p>
         </div>
     </section>
 
     <main class="contact-container">
         <div class="info-side">
-            <h3>Nous Atteindre</h3>
-            <p>Vous avez une question, un projet ou souhaitez simplement échanger ? Nous sommes prêts à vous accompagner.</p>
+            <h3>Postulez chez RX SERVICES</h3>
+            <p>Nous sommes toujours à la recherche de talents passionnés pour rejoindre notre aventure humaine et technologique.</p>
             
-            <ul class="contact-info-list">
-                <li><i class="fas fa-map-marker-alt"></i> <span>15 Rue de l'Innovation, 75008 Paris, France</span></li>
-                <li><i class="fas fa-phone-alt"></i> <span>+33 (0)1 45 67 89 00</span></li>
-                <li><i class="fas fa-envelope"></i> <span>contact@rxservices.com</span></li>
+            <ul style="margin-top: 2rem; list-style: none;">
+                <li style="margin-bottom: 1.5rem;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 1rem;"></i> <strong>Étape 1 :</strong> Remplissez le formulaire ci-contre.</li>
+                <li style="margin-bottom: 1.5rem;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 1rem;"></i> <strong>Étape 2 :</strong> Téléchargez votre CV (PDF ou DOCX).</li>
+                <li style="margin-bottom: 1.5rem;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 1rem;"></i> <strong>Étape 3 :</strong> Nos équipes RH vous recontacteront sous un délai de 72h.</li>
             </ul>
-
-            <div style="background: #eef2f5; height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: var(--text-light);">
-                <span style="font-weight: 500;"><i class="fas fa-map"></i> Carte Interactive Bientôt Disponible</span>
-            </div>
         </div>
 
         <div class="contact-form">
-            <form id="ajax-contact" method="post" action="send_contact.php">
+            <form id="ajax-candidature" enctype="multipart/form-data" method="post" action="send_candidature.php">
                 <input type="text" name="name" placeholder="Votre Nom Complet" required>
                 <input type="email" name="email" placeholder="Votre Adresse E-mail" required>
-                <input type="text" name="subject" placeholder="Sujet de votre message">
-                <textarea name="message" rows="6" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
-                <button type="submit" class="btn-primary" style="width: 100%; padding: 1.2rem; cursor: pointer; border: none;">Envoyer mon message</button>
+                
+                <select name="position" id="job-title" required>
+                    <option value="" disabled selected>Choisissez le poste souhaité</option>
+                    <option value="Senior Fullstack">Développeur Fullstack Sénior</option>
+                    <option value="Project Manager">Chef de Projet Digital</option>
+                    <option value="Consultant Cloud">Consultant Cloud</option>
+                    <option value="Candidature Spontanée">Candidature Spontanée</option>
+                </select>
+
+                <div class="file-upload">
+                    <i class="fas fa-cloud-upload-alt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <p>Cliquez ou glissez votre CV ici (PDF, DOCX)</p>
+                    <input type="file" name="resume" accept=".pdf,.doc,.docx" required style="cursor: pointer;">
+                </div>
+
+                <textarea name="message" rows="4" placeholder="Un mot pour accompagner votre candidature ?"></textarea>
+                
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 1.2rem; cursor: pointer; border: none;">Envoyer ma candidature</button>
                 <div id="form-messages"></div>
             </form>
         </div>
@@ -127,7 +135,20 @@
     <script src="main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const form = document.querySelector("#ajax-contact");
+            // Pre-fill position based on URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const jobTitle = urlParams.get('title');
+            if (jobTitle) {
+                const select = document.querySelector("#job-title");
+                for (let option of select.options) {
+                    if (option.value.includes(jobTitle)) {
+                        option.selected = true;
+                        break;
+                    }
+                }
+            }
+
+            const form = document.querySelector("#ajax-candidature");
             const formMessages = document.querySelector("#form-messages");
 
             form.addEventListener("submit", function(e) {
@@ -138,22 +159,26 @@
                     method: "POST",
                     body: formData
                 })
-                .then(response => {
-                    if (!response.ok) {
-                        return response.text().then(text => { throw new Error(text || "Erreur serveur"); });
-                    }
-                    return response.text();
-                })
+                .then(response => response.text().then(text => ({
+                    status: response.status,
+                    text: text
+                })))
                 .then(result => {
-                    formMessages.classList.remove("error");
-                    formMessages.classList.add("success");
-                    formMessages.textContent = result || "Merci ! Votre message a été envoyé.";
-                    form.reset();
+                    if (result.status === 200) {
+                        formMessages.classList.remove("error");
+                        formMessages.classList.add("success");
+                        formMessages.textContent = result.text;
+                        form.reset();
+                    } else {
+                        formMessages.classList.remove("success");
+                        formMessages.classList.add("error");
+                        formMessages.textContent = result.text || "Une erreur est survenue.";
+                    }
                 })
                 .catch(error => {
                     formMessages.classList.remove("success");
                     formMessages.classList.add("error");
-                    formMessages.textContent = error.message || "Une erreur technique est survenue.";
+                    formMessages.textContent = "Une erreur technique est survenue lors de l'envoi.";
                 });
             });
         });

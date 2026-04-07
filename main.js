@@ -1,5 +1,5 @@
 /**
- * XP Service - Main JavaScript
+ * RX SERVICES - Main JavaScript
  * Handling sticky header and scroll animations
  */
 
